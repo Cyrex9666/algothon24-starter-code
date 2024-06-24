@@ -25,8 +25,8 @@ def getMyPosition(prcSoFar):
         std_dev = np.std(residuals)
         
         # Calculate upper and lower bounds
-        upper_bound = trend + std_dev
-        lower_bound = trend - std_dev
+        upper_bound = trend + 1*std_dev
+        lower_bound = trend - 1*std_dev
         
         # Determine the position based on crossing the bounds
         if prices[-1] > upper_bound[-1]:
