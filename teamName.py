@@ -23,16 +23,18 @@ def getMyPosition(prcSoFar):
         # Calculate standard deviation of residuals
         residuals = prices - trend
         std_dev = np.std(residuals)
-        
+        a
         # Calculate upper and lower bounds
         upper_bound = trend + 1*std_dev
         lower_bound = trend - 1*std_dev
         
         # Determine the position based on crossing the bounds
+        
+        
         if prices[-1] > upper_bound[-1]:
-            newPos[i] = -5000 / prices[-1]  # Sell
+            newPos[i] = -100 # Sell
         elif prices[-1] < lower_bound[-1]:
-            newPos[i] = 5000 / prices[-1]  # Buy
+            newPos[i] = 100  # Buy
         else:
             newPos[i] = 0  # Hold
 
